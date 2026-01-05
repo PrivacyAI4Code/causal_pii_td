@@ -1,0 +1,250 @@
+Running code: ['python', 'ft_fim.py', '--config', '/data/tomasfang/yoloe-test/dit/verl/pii_final/configs/codellama_CodeLlama-13b-hf_fim.yaml', '--output_dir', '/data/tomasfang/yoloe-test/dit/verl/pii_final/save/13b_codellama_stack_v2_fim/ckpts', '--train_file', '/data/tomasfang/yoloe-test/dit/verl/pii_final/dataset_all/train_dataset.json', '--validation_file', '/data/tomasfang/yoloe-test/dit/verl/pii_final/dataset_all/val_dataset.json']
+/data/tomasfang/yoloe-test/dit/verl/verl/lib/python3.12/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+09/06/2025 18:53:50-/data/tomasfang/yoloe-test/dit/verl/pii_final/src/ft_fim.py-main-194:  running src/dataset.py with args: Namespace(config='/data/tomasfang/yoloe-test/dit/verl/pii_final/configs/codellama_CodeLlama-13b-hf_fim.yaml', output_dir='/data/tomasfang/yoloe-test/dit/verl/pii_final/save/13b_codellama_stack_v2_fim/ckpts', train_file='/data/tomasfang/yoloe-test/dit/verl/pii_final/dataset_all/train_dataset.json', validation_file='/data/tomasfang/yoloe-test/dit/verl/pii_final/dataset_all/val_dataset.json')
+09/06/2025 18:53:50-/data/tomasfang/yoloe-test/dit/verl/pii_final/src/ft_fim.py-main-214:  model_args: ModelArguments(model_name_or_path='codellama/CodeLlama-13b-hf', model_type=None, config_overrides=None, config_name=None, tokenizer_name=None, cache_dir=None, use_fast_tokenizer=True, model_revision='main', token=None, trust_remote_code=False, torch_dtype='bfloat16', pad_to_multiple_of=False, attn_implementation='sdpa', use_lora=True, lora_r=16, lora_alpha=32, lora_dropout=0.05, lora_target_modules='q_proj,k_proj,v_proj,o_proj', save_every_epoch=True, hub_name='yanghuattt', experiment_name='13b_codellama_stack_v2_fim', push_to_hub_every_epoch=False)
+09/06/2025 18:53:50-/data/tomasfang/yoloe-test/dit/verl/pii_final/src/ft_fim.py-main-215:  data_args: DataTrainingArguments(dataset_name=None, dataset_config_name=None, train_file='/data/tomasfang/yoloe-test/dit/verl/pii_final/dataset_all/train_dataset.json', validation_file='/data/tomasfang/yoloe-test/dit/verl/pii_final/dataset_all/val_dataset.json', max_train_samples=None, max_eval_samples=None, streaming=False, block_size=1024, fim_rate=0.5, fim_spm_rate=0.5, truncate_or_pad=True, fim_prefix_token='<fim_prefix>', fim_middle_token='<fim_middle>', fim_suffix_token='<fim_suffix>', pad_token='<fim_pad>', overwrite_cache=False, validation_split_percentage=5, preprocessing_num_workers=None, keep_linebreaks=True, using_fim=True)
+09/06/2025 18:53:50-/data/tomasfang/yoloe-test/dit/verl/pii_final/src/ft_fim.py-main-216:  training_args: TrainingArguments(
+_n_gpu=2,
+accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'non_blocking': False, 'gradient_accumulation_kwargs': None, 'use_configured_state': False},
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+average_tokens_across_devices=False,
+batch_eval_metrics=False,
+bf16=False,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+do_eval=True,
+do_predict=False,
+do_train=True,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_on_start=False,
+eval_steps=None,
+eval_strategy=IntervalStrategy.NO,
+eval_use_gather_object=False,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+gradient_accumulation_steps=8,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=None,
+hub_revision=None,
+hub_strategy=HubStrategy.EVERY_SAVE,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_for_metrics=[],
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=0.0001,
+length_column_name=length,
+liger_kernel_config=None,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/data/tomasfang/yoloe-test/dit/verl/pii_final/save/13b_codellama_stack_v2_fim/ckpts/runs/Sep06_18-53-50_c0f6c83c-36.cloud.together.ai,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=500,
+logging_strategy=IntervalStrategy.STEPS,
+lr_scheduler_kwargs={},
+lr_scheduler_type=SchedulerType.LINEAR,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=10,
+optim=OptimizerNames.ADAMW_TORCH,
+optim_args=None,
+optim_target_modules=None,
+output_dir=/data/tomasfang/yoloe-test/dit/verl/pii_final/save/13b_codellama_stack_v2_fim/ckpts,
+overwrite_output_dir=False,
+past_index=-1,
+per_device_eval_batch_size=2,
+per_device_train_batch_size=8,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=True,
+report_to=[],
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+run_name=/data/tomasfang/yoloe-test/dit/verl/pii_final/save/13b_codellama_stack_v2_fim/ckpts,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=500,
+save_strategy=SaveStrategy.STEPS,
+save_total_limit=None,
+seed=42,
+skip_memory_metrics=True,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torch_empty_cache_steps=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_cpu=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_liger_kernel=False,
+use_mps_device=False,
+warmup_ratio=0.0,
+warmup_steps=100,
+weight_decay=0.05,
+)
+09/06/2025 18:53:50-/data/tomasfang/yoloe-test/dit/verl/pii_final/src/ft_fim.py-main-218:  Process rank: 0, device: cuda:0, n_gpu: 2, distributed training: False, training date type: bfloat16
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:08<00:17,  8.56s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:19<00:09,  9.99s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:26<00:00,  8.59s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:26<00:00,  8.83s/it]
+The new embeddings will be initialized from a multivariate normal distribution that has old embeddings' mean and covariance. As described in this article: https://nlp.stanford.edu/~johnhew/vocab-expansion.html. To disable this, use `mean_resizing=False`
+The new lm_head weights will be initialized from a multivariate normal distribution that has old embeddings' mean and covariance. As described in this article: https://nlp.stanford.edu/~johnhew/vocab-expansion.html. To disable this, use `mean_resizing=False`
+09/06/2025 18:54:20-/data/tomasfang/yoloe-test/dit/verl/pii_final/src/ft_fim.py-main-487:  Added special tokens to the tokenizer and resized model's embedding layer
+09/06/2025 18:54:20-/data/tomasfang/yoloe-test/dit/verl/pii_final/src/ft_fim.py-main-491:  Setting up LoRA configuration...
+trainable params: 26,214,400 || all params: 13,042,324,480 || trainable%: 0.2010
+09/06/2025 18:54:22-/data/tomasfang/yoloe-test/dit/verl/pii_final/src/ft_fim.py-main-511:  LoRA configuration applied successfully
+Running tokenizer on dataset:   0%|          | 0/7200 [00:00<?, ? examples/s]Running tokenizer on dataset:  14%|█▍        | 1000/7200 [00:01<00:08, 771.36 examples/s]Running tokenizer on dataset:  28%|██▊       | 2000/7200 [00:02<00:06, 855.84 examples/s]Running tokenizer on dataset:  42%|████▏     | 3000/7200 [00:03<00:05, 756.01 examples/s]Running tokenizer on dataset:  56%|█████▌    | 4000/7200 [00:04<00:03, 1016.73 examples/s]Running tokenizer on dataset:  69%|██████▉   | 5000/7200 [00:04<00:01, 1175.93 examples/s]Running tokenizer on dataset:  83%|████████▎ | 6000/7200 [00:08<00:02, 564.55 examples/s] Running tokenizer on dataset:  97%|█████████▋| 7000/7200 [00:09<00:00, 698.02 examples/s]Running tokenizer on dataset: 100%|██████████| 7200/7200 [00:09<00:00, 728.03 examples/s]Running tokenizer on dataset: 100%|██████████| 7200/7200 [00:09<00:00, 747.72 examples/s]
+Running tokenizer on dataset:   0%|          | 0/900 [00:00<?, ? examples/s]Running tokenizer on dataset: 100%|██████████| 900/900 [00:00<00:00, 1578.53 examples/s]Running tokenizer on dataset: 100%|██████████| 900/900 [00:00<00:00, 1473.05 examples/s]
+Performing FIM transformation:   0%|          | 0/7200 [00:00<?, ? examples/s]Performing FIM transformation:  14%|█▍        | 1000/7200 [00:01<00:10, 581.67 examples/s]Performing FIM transformation:  28%|██▊       | 2000/7200 [00:03<00:09, 569.43 examples/s]Performing FIM transformation:  42%|████▏     | 3000/7200 [00:05<00:07, 561.79 examples/s]Performing FIM transformation:  56%|█████▌    | 4000/7200 [00:06<00:04, 713.49 examples/s]Performing FIM transformation:  69%|██████▉   | 5000/7200 [00:07<00:02, 819.97 examples/s]Performing FIM transformation:  83%|████████▎ | 6000/7200 [00:09<00:02, 597.13 examples/s]Performing FIM transformation:  97%|█████████▋| 7000/7200 [00:10<00:00, 647.08 examples/s]Performing FIM transformation: 100%|██████████| 7200/7200 [00:11<00:00, 657.57 examples/s]Performing FIM transformation: 100%|██████████| 7200/7200 [00:11<00:00, 625.06 examples/s]
+Performing FIM transformation:   0%|          | 0/900 [00:00<?, ? examples/s]Performing FIM transformation: 100%|██████████| 900/900 [00:01<00:00, 877.30 examples/s]Performing FIM transformation: 100%|██████████| 900/900 [00:01<00:00, 817.76 examples/s]
+Grouping texts in chunks of 1024:   0%|          | 0/7200 [00:00<?, ? examples/s]Grouping texts in chunks of 1024:  14%|█▍        | 1000/7200 [00:03<00:22, 270.67 examples/s]Grouping texts in chunks of 1024:  28%|██▊       | 2000/7200 [00:07<00:19, 264.88 examples/s]Grouping texts in chunks of 1024:  42%|████▏     | 3000/7200 [00:11<00:16, 257.65 examples/s]Grouping texts in chunks of 1024:  56%|█████▌    | 4000/7200 [00:13<00:09, 331.78 examples/s]Grouping texts in chunks of 1024:  69%|██████▉   | 5000/7200 [00:15<00:05, 387.82 examples/s]Grouping texts in chunks of 1024:  83%|████████▎ | 6000/7200 [00:20<00:04, 283.14 examples/s]Grouping texts in chunks of 1024:  97%|█████████▋| 7000/7200 [00:23<00:00, 307.66 examples/s]Grouping texts in chunks of 1024: 100%|██████████| 7200/7200 [00:23<00:00, 313.66 examples/s]Grouping texts in chunks of 1024: 100%|██████████| 7200/7200 [00:23<00:00, 300.11 examples/s]
+Grouping texts in chunks of 1024:   0%|          | 0/900 [00:00<?, ? examples/s]Grouping texts in chunks of 1024: 100%|██████████| 900/900 [00:02<00:00, 417.37 examples/s]Grouping texts in chunks of 1024: 100%|██████████| 900/900 [00:02<00:00, 403.00 examples/s]
+No label_names provided for model class `PeftModelForCausalLM`. Since `PeftModel` hides base models input arguments, if label_names is not given, label_names can't be set automatically within `Trainer`. Note that empty label_names list will be used instead.
+  0%|          | 0/2970 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "/data/tomasfang/yoloe-test/dit/verl/pii_final/src/ft_fim.py", line 814, in <module>
+    main()
+  File "/data/tomasfang/yoloe-test/dit/verl/pii_final/src/ft_fim.py", line 763, in main
+    train_result = trainer.train(resume_from_checkpoint=checkpoint)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/tomasfang/yoloe-test/dit/verl/verl/lib/python3.12/site-packages/transformers/trainer.py", line 2206, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/data/tomasfang/yoloe-test/dit/verl/verl/lib/python3.12/site-packages/transformers/trainer.py", line 2548, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/tomasfang/yoloe-test/dit/verl/verl/lib/python3.12/site-packages/transformers/trainer.py", line 3749, in training_step
+    loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/tomasfang/yoloe-test/dit/verl/verl/lib/python3.12/site-packages/transformers/trainer.py", line 3836, in compute_loss
+    outputs = model(**inputs)
+              ^^^^^^^^^^^^^^^
+  File "/data/tomasfang/yoloe-test/dit/verl/verl/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/tomasfang/yoloe-test/dit/verl/verl/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/tomasfang/yoloe-test/dit/verl/verl/lib/python3.12/site-packages/peft/peft_model.py", line 1864, in forward
+    return self.base_model(
+           ^^^^^^^^^^^^^^^^
+  File "/data/tomasfang/yoloe-test/dit/verl/verl/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/tomasfang/yoloe-test/dit/verl/verl/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/tomasfang/yoloe-test/dit/verl/verl/lib/python3.12/site-packages/peft/tuners/tuners_utils.py", line 227, in forward
+    return self.model.forward(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/tomasfang/yoloe-test/dit/verl/verl/lib/python3.12/site-packages/accelerate/hooks.py", line 175, in new_forward
+    output = module._old_forward(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/tomasfang/yoloe-test/dit/verl/verl/lib/python3.12/site-packages/transformers/utils/generic.py", line 943, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/tomasfang/yoloe-test/dit/verl/verl/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 553, in forward
+    outputs: BaseModelOutputWithPast = self.model(
+                                       ^^^^^^^^^^^
+  File "/data/tomasfang/yoloe-test/dit/verl/verl/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/tomasfang/yoloe-test/dit/verl/verl/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/tomasfang/yoloe-test/dit/verl/verl/lib/python3.12/site-packages/transformers/utils/generic.py", line 943, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/tomasfang/yoloe-test/dit/verl/verl/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 441, in forward
+    layer_outputs = decoder_layer(
+                    ^^^^^^^^^^^^^^
+  File "/data/tomasfang/yoloe-test/dit/verl/verl/lib/python3.12/site-packages/transformers/modeling_layers.py", line 83, in __call__
+    return super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/tomasfang/yoloe-test/dit/verl/verl/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/tomasfang/yoloe-test/dit/verl/verl/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/tomasfang/yoloe-test/dit/verl/verl/lib/python3.12/site-packages/accelerate/hooks.py", line 175, in new_forward
+    output = module._old_forward(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/tomasfang/yoloe-test/dit/verl/verl/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 306, in forward
+    hidden_states = self.mlp(hidden_states)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/tomasfang/yoloe-test/dit/verl/verl/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/tomasfang/yoloe-test/dit/verl/verl/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/tomasfang/yoloe-test/dit/verl/verl/lib/python3.12/site-packages/accelerate/hooks.py", line 175, in new_forward
+    output = module._old_forward(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/tomasfang/yoloe-test/dit/verl/verl/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 151, in forward
+    down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+                                                                ^^^^^^^^^^^^^^^
+  File "/data/tomasfang/yoloe-test/dit/verl/verl/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/tomasfang/yoloe-test/dit/verl/verl/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/tomasfang/yoloe-test/dit/verl/verl/lib/python3.12/site-packages/accelerate/hooks.py", line 175, in new_forward
+    output = module._old_forward(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/tomasfang/yoloe-test/dit/verl/verl/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 216.00 MiB. GPU 0 has a total capacity of 140.06 GiB of which 125.62 MiB is free. Process 3365088 has 87.85 GiB memory in use. Including non-PyTorch memory, this process has 52.09 GiB memory in use. Of the allocated memory 50.63 GiB is allocated by PyTorch, and 527.51 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+  0%|          | 0/2970 [00:01<?, ?it/s]

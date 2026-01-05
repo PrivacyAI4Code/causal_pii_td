@@ -1,0 +1,38 @@
+--extra-index-url https://download.pytorch.org/whl/cu124
+
+# python=3.12.7
+# python -m pip install -r requirements.txt
+transformers==4.53.1
+accelerate
+bitsandbytes
+datasets
+evaluate
+huggingface_hub
+matplotlib
+python-dotenv
+pytest
+regex
+scikit-learn
+smart_open[s3]
+wandb
+seaborn
+pydrive
+spacy
+gibberish_detector
+luhn
+openai
+pyyaml
+pyahocorasick
+detect-secrets
+presidio-analyzer
+torch
+git+https://github.com/huggingface/peft.git
+
+# Additional packages to install manually:
+# pip install ninja  
+# git clone https://github.com/Dao-AILab/flash-attention.git
+# cd flash-attention
+# pip install . --no-build-isolation
+# git clone --depth 1 https://github.com/hiyouga/LLaMA-Factory.git
+# cd LLaMA-Factory
+# pip install -e ".[torch,metrics]"

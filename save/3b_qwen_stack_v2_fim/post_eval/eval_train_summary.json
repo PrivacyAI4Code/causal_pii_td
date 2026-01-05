@@ -1,0 +1,11 @@
+base_model - train accuracy: 0.5605442588767093 correct: 8276413 total: 14764959
+epoch-1 - train accuracy: 0.5663068214412245 correct: 8361497 total: 14764959
+epoch-2 - train accuracy: 0.5690358503535295 correct: 8401791 total: 14764959
+epoch-3 - train accuracy: 0.5712249522670534 correct: 8434113 total: 14764959
+epoch-4 - train accuracy: 0.5727631888446152 correct: 8456825 total: 14764959
+epoch-5 - train accuracy: 0.5744616696869934 correct: 8481903 total: 14764959
+epoch-6 - train accuracy: 0.5752631619227659 correct: 8493737 total: 14764959
+epoch-7 - train accuracy: 0.5762415594923088 correct: 8508183 total: 14764959
+epoch-8 - train accuracy: 0.5766227322405704 correct: 8513811 total: 14764959
+epoch-9 - train accuracy: 0.5771759339121768 correct: 8521979 total: 14764959
+epoch-10 - train accuracy: 0.5769607623021507 correct: 8518802 total: 14764959

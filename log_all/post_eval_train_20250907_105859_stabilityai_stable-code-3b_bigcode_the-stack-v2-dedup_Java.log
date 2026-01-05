@@ -1,0 +1,147 @@
+Running code: ['python', 'post_eval_train.py', '--config', '/home/hyang45/se_git_repo/pii_final/configs/stabilityai_stable-code-3b_fim.yaml', '--output_dir', '/home/hyang45/se_git_repo/pii_final/save/3b_stablecode_stack_v2_fim/post_eval', '--test_file', '/home/hyang45/se_git_repo/pii_final/dataset_all/train_dataset.json', '--dynamic_file', 'None']
+09/07/2025 10:59:01-/home/hyang45/se_git_repo/pii_final/src/post_eval_train.py-main-39:  Running post-evaluation with args: Namespace(config='/home/hyang45/se_git_repo/pii_final/configs/stabilityai_stable-code-3b_fim.yaml', test_file='/home/hyang45/se_git_repo/pii_final/dataset_all/train_dataset.json', dynamic_file='None', output_dir='/home/hyang45/se_git_repo/pii_final/save/3b_stablecode_stack_v2_fim/post_eval')
+09/07/2025 10:59:01-/home/hyang45/se_git_repo/pii_final/src/post_eval_train.py-main-55:  model_args: ModelArguments(model_name_or_path='stabilityai/stable-code-3b', model_type=None, config_overrides=None, config_name=None, tokenizer_name=None, cache_dir=None, use_fast_tokenizer=True, model_revision='main', token='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', trust_remote_code=False, torch_dtype='bfloat16', pad_to_multiple_of=False, attn_implementation='sdpa', use_lora=True, lora_r=16, lora_alpha=32, lora_dropout=0.05, lora_target_modules='q_proj,k_proj,v_proj,o_proj', save_every_epoch=True, hub_name='yanghuattt', experiment_name='3b_stablecode_stack_v2_fim', push_to_hub_every_epoch=False, num_train_epochs=10)
+09/07/2025 10:59:01-/home/hyang45/se_git_repo/pii_final/src/post_eval_train.py-main-56:  data_args: DataArguments(dataset_name=None, dataset_config_name=None, train_file=None, validation_file=None, max_train_samples=None, max_eval_samples=None, streaming=False, block_size=1024, fim_rate=0.5, fim_spm_rate=0.5, truncate_or_pad=True, fim_prefix_token='<fim_prefix>', fim_middle_token='<fim_middle>', fim_suffix_token='<fim_suffix>', pad_token='<fim_pad>', overwrite_cache=False, validation_split_percentage=5, preprocessing_num_workers=None, keep_linebreaks=True, using_fim=True, test_file='/home/hyang45/se_git_repo/pii_final/dataset_all/train_dataset.json', dynamic_file='None', post_eval_batch_size=8, post_attack_batch_size=8, prompt_missing_size=50, seed=42)
+09/07/2025 10:59:01-/home/hyang45/se_git_repo/pii_final/src/post_func.py-build_checkpoint_paths-128:  will check: yanghuattt/3b_stablecode_stack_v2_fim@stable-code-3b-fim-lora-epoch-1 from hub
+09/07/2025 10:59:01-/home/hyang45/se_git_repo/pii_final/src/post_func.py-build_checkpoint_paths-128:  will check: yanghuattt/3b_stablecode_stack_v2_fim@stable-code-3b-fim-lora-epoch-2 from hub
+09/07/2025 10:59:01-/home/hyang45/se_git_repo/pii_final/src/post_func.py-build_checkpoint_paths-128:  will check: yanghuattt/3b_stablecode_stack_v2_fim@stable-code-3b-fim-lora-epoch-3 from hub
+09/07/2025 10:59:01-/home/hyang45/se_git_repo/pii_final/src/post_func.py-build_checkpoint_paths-128:  will check: yanghuattt/3b_stablecode_stack_v2_fim@stable-code-3b-fim-lora-epoch-4 from hub
+09/07/2025 10:59:01-/home/hyang45/se_git_repo/pii_final/src/post_func.py-build_checkpoint_paths-128:  will check: yanghuattt/3b_stablecode_stack_v2_fim@stable-code-3b-fim-lora-epoch-5 from hub
+09/07/2025 10:59:01-/home/hyang45/se_git_repo/pii_final/src/post_func.py-build_checkpoint_paths-128:  will check: yanghuattt/3b_stablecode_stack_v2_fim@stable-code-3b-fim-lora-epoch-6 from hub
+09/07/2025 10:59:01-/home/hyang45/se_git_repo/pii_final/src/post_func.py-build_checkpoint_paths-128:  will check: yanghuattt/3b_stablecode_stack_v2_fim@stable-code-3b-fim-lora-epoch-7 from hub
+09/07/2025 10:59:01-/home/hyang45/se_git_repo/pii_final/src/post_func.py-build_checkpoint_paths-128:  will check: yanghuattt/3b_stablecode_stack_v2_fim@stable-code-3b-fim-lora-epoch-8 from hub
+09/07/2025 10:59:01-/home/hyang45/se_git_repo/pii_final/src/post_func.py-build_checkpoint_paths-128:  will check: yanghuattt/3b_stablecode_stack_v2_fim@stable-code-3b-fim-lora-epoch-9 from hub
+09/07/2025 10:59:01-/home/hyang45/se_git_repo/pii_final/src/post_func.py-build_checkpoint_paths-128:  will check: yanghuattt/3b_stablecode_stack_v2_fim@stable-code-3b-fim-lora-epoch-10 from hub
+09/07/2025 10:59:01-/home/hyang45/se_git_repo/pii_final/src/post_eval_train.py-main-78:  
+=== Evaluating checkpoint: base_model ===
+09/07/2025 10:59:01-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-144:  Loading model and tokenizer from stabilityai/stable-code-3b
+09/07/2025 10:59:01-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-177:  Loading model and tokenizer from checkpoint for non-LoRA evaluation...
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 79.16it/s]
+/home/hyang45/anaconda3/envs/pii/lib/python3.12/site-packages/peft/tuners/tuners_utils.py:201: UserWarning: Already found a `peft_config` attribute in the model. This will lead to having multiple adapters in the model. Make sure to know what you are doing!
+  warnings.warn(
+09/07/2025 10:59:04-/home/hyang45/se_git_repo/pii_final/src/post_eval_train.py-main-89:  Tokenizer changed, preprocessing dataset...
+09/07/2025 10:59:04-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 219.130.135.53
+09/07/2025 10:59:04-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 24.196.52.155
+09/07/2025 10:59:04-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 107.22.253.140
+09/07/2025 10:59:21-/home/hyang45/se_git_repo/pii_final/src/post_func.py-evaluate_model_on_dataset-573:  Evaluating on 7200 examples under test mode...
+09/07/2025 11:17:09-/home/hyang45/se_git_repo/pii_final/src/post_func.py-evaluate_model_on_dataset-627:  Test evaluation - Overall token accuracy: 0.6287 (10871166/17290746)
+09/07/2025 11:17:09-/home/hyang45/se_git_repo/pii_final/src/post_eval_train.py-main-78:  
+=== Evaluating checkpoint: epoch-1 ===
+09/07/2025 11:17:09-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-141:  Loading model and tokenizer from yanghuattt/3b_stablecode_stack_v2_fim with version stable-code-3b-fim-lora-epoch-1
+09/07/2025 11:17:09-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-147:  Loading base model and tokenizer for LoRA evaluation...
+09/07/2025 11:17:09-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-159:  Base model already loaded, using stabilityai/stable-code-3b
+09/07/2025 11:17:09-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-171:  Loaded tokenizer from checkpoint: yanghuattt/3b_stablecode_stack_v2_fim with version stable-code-3b-fim-lora-epoch-1
+09/07/2025 11:17:10-/home/hyang45/se_git_repo/pii_final/src/post_eval_train.py-main-89:  Tokenizer changed, preprocessing dataset...
+09/07/2025 11:17:10-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 219.130.135.53
+09/07/2025 11:17:10-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 24.196.52.155
+09/07/2025 11:17:10-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 107.22.253.140
+09/07/2025 11:17:26-/home/hyang45/se_git_repo/pii_final/src/post_func.py-evaluate_model_on_dataset-573:  Evaluating on 7200 examples under test mode...
+09/07/2025 11:38:29-/home/hyang45/se_git_repo/pii_final/src/post_func.py-evaluate_model_on_dataset-627:  Test evaluation - Overall token accuracy: 0.6439 (11132938/17290746)
+09/07/2025 11:38:29-/home/hyang45/se_git_repo/pii_final/src/post_eval_train.py-main-78:  
+=== Evaluating checkpoint: epoch-2 ===
+09/07/2025 11:38:29-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-141:  Loading model and tokenizer from yanghuattt/3b_stablecode_stack_v2_fim with version stable-code-3b-fim-lora-epoch-2
+09/07/2025 11:38:29-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-147:  Loading base model and tokenizer for LoRA evaluation...
+09/07/2025 11:38:29-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-159:  Base model already loaded, using stabilityai/stable-code-3b
+09/07/2025 11:38:29-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-171:  Loaded tokenizer from checkpoint: yanghuattt/3b_stablecode_stack_v2_fim with version stable-code-3b-fim-lora-epoch-2
+09/07/2025 11:38:30-/home/hyang45/se_git_repo/pii_final/src/post_eval_train.py-main-89:  Tokenizer changed, preprocessing dataset...
+09/07/2025 11:38:30-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 219.130.135.53
+09/07/2025 11:38:30-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 24.196.52.155
+09/07/2025 11:38:30-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 107.22.253.140
+09/07/2025 11:38:46-/home/hyang45/se_git_repo/pii_final/src/post_func.py-evaluate_model_on_dataset-573:  Evaluating on 7200 examples under test mode...
+09/07/2025 11:59:48-/home/hyang45/se_git_repo/pii_final/src/post_func.py-evaluate_model_on_dataset-627:  Test evaluation - Overall token accuracy: 0.6482 (11207115/17290746)
+09/07/2025 11:59:48-/home/hyang45/se_git_repo/pii_final/src/post_eval_train.py-main-78:  
+=== Evaluating checkpoint: epoch-3 ===
+09/07/2025 11:59:48-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-141:  Loading model and tokenizer from yanghuattt/3b_stablecode_stack_v2_fim with version stable-code-3b-fim-lora-epoch-3
+09/07/2025 11:59:48-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-147:  Loading base model and tokenizer for LoRA evaluation...
+09/07/2025 11:59:48-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-159:  Base model already loaded, using stabilityai/stable-code-3b
+09/07/2025 11:59:49-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-171:  Loaded tokenizer from checkpoint: yanghuattt/3b_stablecode_stack_v2_fim with version stable-code-3b-fim-lora-epoch-3
+09/07/2025 11:59:49-/home/hyang45/se_git_repo/pii_final/src/post_eval_train.py-main-89:  Tokenizer changed, preprocessing dataset...
+09/07/2025 11:59:49-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 219.130.135.53
+09/07/2025 11:59:49-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 24.196.52.155
+09/07/2025 11:59:49-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 107.22.253.140
+09/07/2025 12:00:06-/home/hyang45/se_git_repo/pii_final/src/post_func.py-evaluate_model_on_dataset-573:  Evaluating on 7200 examples under test mode...
+09/07/2025 12:21:09-/home/hyang45/se_git_repo/pii_final/src/post_func.py-evaluate_model_on_dataset-627:  Test evaluation - Overall token accuracy: 0.6515 (11264963/17290746)
+09/07/2025 12:21:09-/home/hyang45/se_git_repo/pii_final/src/post_eval_train.py-main-78:  
+=== Evaluating checkpoint: epoch-4 ===
+09/07/2025 12:21:09-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-141:  Loading model and tokenizer from yanghuattt/3b_stablecode_stack_v2_fim with version stable-code-3b-fim-lora-epoch-4
+09/07/2025 12:21:09-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-147:  Loading base model and tokenizer for LoRA evaluation...
+09/07/2025 12:21:09-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-159:  Base model already loaded, using stabilityai/stable-code-3b
+09/07/2025 12:21:09-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-171:  Loaded tokenizer from checkpoint: yanghuattt/3b_stablecode_stack_v2_fim with version stable-code-3b-fim-lora-epoch-4
+09/07/2025 12:21:10-/home/hyang45/se_git_repo/pii_final/src/post_eval_train.py-main-89:  Tokenizer changed, preprocessing dataset...
+09/07/2025 12:21:10-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 219.130.135.53
+09/07/2025 12:21:10-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 24.196.52.155
+09/07/2025 12:21:10-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 107.22.253.140
+09/07/2025 12:21:26-/home/hyang45/se_git_repo/pii_final/src/post_func.py-evaluate_model_on_dataset-573:  Evaluating on 7200 examples under test mode...
+09/07/2025 12:42:31-/home/hyang45/se_git_repo/pii_final/src/post_func.py-evaluate_model_on_dataset-627:  Test evaluation - Overall token accuracy: 0.6546 (11318845/17290746)
+09/07/2025 12:42:31-/home/hyang45/se_git_repo/pii_final/src/post_eval_train.py-main-78:  
+=== Evaluating checkpoint: epoch-5 ===
+09/07/2025 12:42:31-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-141:  Loading model and tokenizer from yanghuattt/3b_stablecode_stack_v2_fim with version stable-code-3b-fim-lora-epoch-5
+09/07/2025 12:42:31-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-147:  Loading base model and tokenizer for LoRA evaluation...
+09/07/2025 12:42:31-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-159:  Base model already loaded, using stabilityai/stable-code-3b
+09/07/2025 12:42:31-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-171:  Loaded tokenizer from checkpoint: yanghuattt/3b_stablecode_stack_v2_fim with version stable-code-3b-fim-lora-epoch-5
+09/07/2025 12:42:31-/home/hyang45/se_git_repo/pii_final/src/post_eval_train.py-main-89:  Tokenizer changed, preprocessing dataset...
+09/07/2025 12:42:32-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 219.130.135.53
+09/07/2025 12:42:32-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 24.196.52.155
+09/07/2025 12:42:32-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 107.22.253.140
+09/07/2025 12:42:48-/home/hyang45/se_git_repo/pii_final/src/post_func.py-evaluate_model_on_dataset-573:  Evaluating on 7200 examples under test mode...
+09/07/2025 13:03:54-/home/hyang45/se_git_repo/pii_final/src/post_func.py-evaluate_model_on_dataset-627:  Test evaluation - Overall token accuracy: 0.6570 (11360557/17290746)
+09/07/2025 13:03:54-/home/hyang45/se_git_repo/pii_final/src/post_eval_train.py-main-78:  
+=== Evaluating checkpoint: epoch-6 ===
+09/07/2025 13:03:54-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-141:  Loading model and tokenizer from yanghuattt/3b_stablecode_stack_v2_fim with version stable-code-3b-fim-lora-epoch-6
+09/07/2025 13:03:54-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-147:  Loading base model and tokenizer for LoRA evaluation...
+09/07/2025 13:03:54-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-159:  Base model already loaded, using stabilityai/stable-code-3b
+09/07/2025 13:03:54-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-171:  Loaded tokenizer from checkpoint: yanghuattt/3b_stablecode_stack_v2_fim with version stable-code-3b-fim-lora-epoch-6
+09/07/2025 13:03:55-/home/hyang45/se_git_repo/pii_final/src/post_eval_train.py-main-89:  Tokenizer changed, preprocessing dataset...
+09/07/2025 13:03:55-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 219.130.135.53
+09/07/2025 13:03:55-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 24.196.52.155
+09/07/2025 13:03:55-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 107.22.253.140
+09/07/2025 13:04:12-/home/hyang45/se_git_repo/pii_final/src/post_func.py-evaluate_model_on_dataset-573:  Evaluating on 7200 examples under test mode...
+09/07/2025 13:25:16-/home/hyang45/se_git_repo/pii_final/src/post_func.py-evaluate_model_on_dataset-627:  Test evaluation - Overall token accuracy: 0.6589 (11392089/17290746)
+09/07/2025 13:25:16-/home/hyang45/se_git_repo/pii_final/src/post_eval_train.py-main-78:  
+=== Evaluating checkpoint: epoch-7 ===
+09/07/2025 13:25:16-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-141:  Loading model and tokenizer from yanghuattt/3b_stablecode_stack_v2_fim with version stable-code-3b-fim-lora-epoch-7
+09/07/2025 13:25:16-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-147:  Loading base model and tokenizer for LoRA evaluation...
+09/07/2025 13:25:16-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-159:  Base model already loaded, using stabilityai/stable-code-3b
+09/07/2025 13:25:16-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-171:  Loaded tokenizer from checkpoint: yanghuattt/3b_stablecode_stack_v2_fim with version stable-code-3b-fim-lora-epoch-7
+09/07/2025 13:25:17-/home/hyang45/se_git_repo/pii_final/src/post_eval_train.py-main-89:  Tokenizer changed, preprocessing dataset...
+09/07/2025 13:25:17-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 219.130.135.53
+09/07/2025 13:25:17-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 24.196.52.155
+09/07/2025 13:25:17-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 107.22.253.140
+09/07/2025 13:25:34-/home/hyang45/se_git_repo/pii_final/src/post_func.py-evaluate_model_on_dataset-573:  Evaluating on 7200 examples under test mode...
+09/07/2025 13:46:40-/home/hyang45/se_git_repo/pii_final/src/post_func.py-evaluate_model_on_dataset-627:  Test evaluation - Overall token accuracy: 0.6607 (11423945/17290746)
+09/07/2025 13:46:40-/home/hyang45/se_git_repo/pii_final/src/post_eval_train.py-main-78:  
+=== Evaluating checkpoint: epoch-8 ===
+09/07/2025 13:46:40-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-141:  Loading model and tokenizer from yanghuattt/3b_stablecode_stack_v2_fim with version stable-code-3b-fim-lora-epoch-8
+09/07/2025 13:46:40-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-147:  Loading base model and tokenizer for LoRA evaluation...
+09/07/2025 13:46:40-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-159:  Base model already loaded, using stabilityai/stable-code-3b
+09/07/2025 13:46:40-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-171:  Loaded tokenizer from checkpoint: yanghuattt/3b_stablecode_stack_v2_fim with version stable-code-3b-fim-lora-epoch-8
+09/07/2025 13:46:41-/home/hyang45/se_git_repo/pii_final/src/post_eval_train.py-main-89:  Tokenizer changed, preprocessing dataset...
+09/07/2025 13:46:41-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 219.130.135.53
+09/07/2025 13:46:41-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 24.196.52.155
+09/07/2025 13:46:41-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 107.22.253.140
+09/07/2025 13:46:58-/home/hyang45/se_git_repo/pii_final/src/post_func.py-evaluate_model_on_dataset-573:  Evaluating on 7200 examples under test mode...
+09/07/2025 14:08:02-/home/hyang45/se_git_repo/pii_final/src/post_func.py-evaluate_model_on_dataset-627:  Test evaluation - Overall token accuracy: 0.6617 (11440609/17290746)
+09/07/2025 14:08:02-/home/hyang45/se_git_repo/pii_final/src/post_eval_train.py-main-78:  
+=== Evaluating checkpoint: epoch-9 ===
+09/07/2025 14:08:02-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-141:  Loading model and tokenizer from yanghuattt/3b_stablecode_stack_v2_fim with version stable-code-3b-fim-lora-epoch-9
+09/07/2025 14:08:02-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-147:  Loading base model and tokenizer for LoRA evaluation...
+09/07/2025 14:08:02-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-159:  Base model already loaded, using stabilityai/stable-code-3b
+09/07/2025 14:08:02-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-171:  Loaded tokenizer from checkpoint: yanghuattt/3b_stablecode_stack_v2_fim with version stable-code-3b-fim-lora-epoch-9
+09/07/2025 14:08:02-/home/hyang45/se_git_repo/pii_final/src/post_eval_train.py-main-89:  Tokenizer changed, preprocessing dataset...
+09/07/2025 14:08:03-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 219.130.135.53
+09/07/2025 14:08:03-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 24.196.52.155
+09/07/2025 14:08:03-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 107.22.253.140
+09/07/2025 14:08:19-/home/hyang45/se_git_repo/pii_final/src/post_func.py-evaluate_model_on_dataset-573:  Evaluating on 7200 examples under test mode...
+09/07/2025 14:29:24-/home/hyang45/se_git_repo/pii_final/src/post_func.py-evaluate_model_on_dataset-627:  Test evaluation - Overall token accuracy: 0.6624 (11454126/17290746)
+09/07/2025 14:29:25-/home/hyang45/se_git_repo/pii_final/src/post_eval_train.py-main-78:  
+=== Evaluating checkpoint: epoch-10 ===
+09/07/2025 14:29:25-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-141:  Loading model and tokenizer from yanghuattt/3b_stablecode_stack_v2_fim with version stable-code-3b-fim-lora-epoch-10
+09/07/2025 14:29:25-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-147:  Loading base model and tokenizer for LoRA evaluation...
+09/07/2025 14:29:25-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-159:  Base model already loaded, using stabilityai/stable-code-3b
+09/07/2025 14:29:25-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_model_and_tokenizer-171:  Loaded tokenizer from checkpoint: yanghuattt/3b_stablecode_stack_v2_fim with version stable-code-3b-fim-lora-epoch-10
+09/07/2025 14:29:25-/home/hyang45/se_git_repo/pii_final/src/post_eval_train.py-main-89:  Tokenizer changed, preprocessing dataset...
+09/07/2025 14:29:26-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 219.130.135.53
+09/07/2025 14:29:26-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 24.196.52.155
+09/07/2025 14:29:26-/home/hyang45/se_git_repo/pii_final/src/post_func.py-load_dataset_for_post-286:  middle_text: 107.22.253.140
+09/07/2025 14:29:43-/home/hyang45/se_git_repo/pii_final/src/post_func.py-evaluate_model_on_dataset-573:  Evaluating on 7200 examples under test mode...
+09/07/2025 14:50:47-/home/hyang45/se_git_repo/pii_final/src/post_func.py-evaluate_model_on_dataset-627:  Test evaluation - Overall token accuracy: 0.6627 (11458158/17290746)

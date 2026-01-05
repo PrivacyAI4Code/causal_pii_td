@@ -1,0 +1,11 @@
+base_model - Test accuracy: 0.7010547442683779 correct: 1482409 total: 2114541
+epoch-1 - Test accuracy: 0.8053412064367633 correct: 1702927 total: 2114541
+epoch-2 - Test accuracy: 0.8065580189743305 correct: 1705500 total: 2114541
+epoch-3 - Test accuracy: 0.8065854480948821 correct: 1705558 total: 2114541
+epoch-4 - Test accuracy: 0.8063906067557924 correct: 1705146 total: 2114541
+epoch-5 - Test accuracy: 0.8053700543049296 correct: 1702988 total: 2114541
+epoch-6 - Test accuracy: 0.8049397008617946 correct: 1702078 total: 2114541
+epoch-7 - Test accuracy: 0.8046171722373792 correct: 1701396 total: 2114541
+epoch-8 - Test accuracy: 0.8046332513770128 correct: 1701430 total: 2114541
+epoch-9 - Test accuracy: 0.8043159248271847 correct: 1700759 total: 2114541
+epoch-10 - Test accuracy: 0.8040246086502933 correct: 1700143 total: 2114541
