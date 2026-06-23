@@ -53,6 +53,7 @@ Marko A. Rodriguez
 ```
 
 # input prompt
+
 ```text
 <fim_suffix>atten\";\n\n    public Atom<List> compute(final List<Operation> arguments, final GremlinScriptContext context) throws RuntimeException {\n        if (arguments.size() == 0)\n            throw new RuntimeException(this.createUnsupportedArgumentMessage());\n\n        List results = new ArrayList();\n        flatten(results, FunctionHelper.generateObjects(arguments));\n        return new Atom<List>(results);\n    }\n\n    public static void flatten(Collection current, Object object) {\n        if (object instanceof Iterable) {\n            for (Object o : (Iterable) object) {\n                flatten(current, o);\n            }\n        } else\n            current.add(object);\n    }\n\n    public String getFunctionName() {\n        return FUNCTION_NAME;\n    }\n}\n<fim_prefix> package com.tinkerpop.gremlin.functions.g.ime;\n\nimport com.tinkerpop.gremlin.compiler.context.GremlinScriptContext;\nimport com.tinkerpop.gremlin.compiler.operations.Operation;\nimport com.tinkerpop.gremlin.compiler.types.Atom;\nimport com.tinkerpop.gremlin.functions.AbstractFunction;\nimport com.tinkerpop.gremlin.functions.FunctionHelper;\n\nimport java.util.ArrayList;\nimport java.util.Collection;\nimport java.util.List<fim_middle>
 ```
